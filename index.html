@@ -1,0 +1,86 @@
+<html>
+<head>
+<script language="javascript">
+ScrollRate = 50;
+
+function scrollDiv_init() {
+	DivElmnt = document.getElementById('MyDivName');
+	ReachedMaxScroll = false;
+	
+	DivElmnt.scrollTop = 0;
+	PreviousScrollTop  = 0;
+	
+	ScrollInterval = setInterval('scrollDiv()', ScrollRate);
+}
+
+function scrollDiv() {
+	
+	if (!ReachedMaxScroll) {
+		DivElmnt.scrollTop = PreviousScrollTop;
+		PreviousScrollTop++;
+		
+		ReachedMaxScroll = DivElmnt.scrollTop >= (DivElmnt.scrollHeight - DivElmnt.offsetHeight);
+	}
+	else {
+		ReachedMaxScroll = (DivElmnt.scrollTop == 0)?false:true;
+		
+		DivElmnt.scrollTop = PreviousScrollTop;
+		PreviousScrollTop--;
+	}
+}
+</script>
+</head>
+<body onLoad="scrollDiv_init()">
+<div id="MyDivName" style="overflow:auto;width:;height:700px">
+<h1>Credits</h1>
+<br>
+<br>
+<br>
+<br>
+<h2>Music</h2>
+<br>
+<br>
+Gwe Tv
+<br> 
+<br>
+<br>
+<br>
+ <h2>Beta Testers</h2>
+ <br>
+ <br>
+ NTh3R
+ <br>
+ <br>
+ Ostrich
+ <br>
+ <br>
+ creationsofavillager
+ <br>
+ <br>
+ FearlessPhoenix
+ <br>
+ <br>
+ Dolphin_Blast
+ <br>
+ <br>
+ <br>
+ <br>
+ <h2>Song Requests</h2>
+ <br>
+ <br>
+ A-A-ron
+<br>
+<br>
+ E-v-A-n
+<br>
+<br>
+Tyler
+<br>
+<br>
+Mr.koolaid
+<br>
+<br>
+Dylan Jahames Hess ;)
+</div>
+</body>
+</html>
